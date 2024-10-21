@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #333;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Note that we gave the background to .page-wrapper not body */
+.page-wrapper {
+  position: relative;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+  min-height: 100vh;
+  overflow: auto;
+}
+
+main {
+  padding: 6rem 0;
+}
+
+main .button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+main .button-container .show-modal {
+  border: none;
+  background-color: #fff;
+  color: #444;
+  font-family: inherit;
+  font-weight: 600;
+  font-style: inherit;
+  font-size: 2rem;
+  padding: 1.75rem 3.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+/* Note the position: fixed for overlay */
+.overlay {
+  /* Note */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Note */
+  width: 100%;
+  /* Note */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* backdrop-filter for making the overlay blur */
+  backdrop-filter: blur(5px);
+}
+
+/* Note the position: fixed for overlay */
+.modal {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 2rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.modal .modal-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  background-color: #fff;
+  padding: 4rem 6rem;
+  border-radius: 0.5rem;
+}
+
+.modal .modal-container .close-modal {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  font-family: inherit;
+  font-weight: 600;
+  font-style: inherit;
+  font-size: 4rem;
+}
+
+.modal .modal-container h1 {
+  padding-bottom: 2rem;
+}
